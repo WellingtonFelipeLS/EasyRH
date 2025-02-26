@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/easyrh?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: root
+    password: adm123
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  error:
+    include-stacktrace: never
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:12345678}
